@@ -7,6 +7,7 @@ function check()
     var q4 = document.forms["Political Quiz"]["q4"].value;
     var q5 = document.forms["Political Quiz"]["q5"].value;
     var q6 = document.forms["Political Quiz"]["q6"].value;
+    var q7 = document.forms["Political Quiz"]["q7"].value;
 
     //Variables:
     var eco = 0;
@@ -60,19 +61,23 @@ function check()
         }
 
     //Question 3:
-        if (q3 == "keynesian") {
+        if (q3 == "keynesian") 
+        {
             eco = eco - 0.5;
         }
 
-        else if (q3 == "monetarist") {
+        else if (q3 == "monetarist") 
+        {
             eco = eco + 0.25;
         }
 
-        else if (q3 == "austrian") {
+        else if (q3 == "austrian") 
+        {
             eco = eco + 0.5;
         }
 
-        else if (q3 == "stossel") {
+        else if (q3 == "stossel") 
+        {
             eco = eco + 1;
         }
 
@@ -167,6 +172,30 @@ function check()
             cult = cult + 0.25;
             pat = pat - 0.75;
         }
+
+        //Question 7:
+        if (q7 == "closed") 
+        {
+            eco = eco - 1;
+
+        }
+
+        else if (q7 == "fixedExchange") 
+        {
+            eco = eco - 0.5;
+        }
+
+        else if (q7 == "managedFloat") 
+        {
+            eco = eco + 0.5;
+        }
+
+        else if (q7 == "floatingExchange") 
+        {
+            eco = eco + 1;
+        }
+
+
 
         document.getElementById("after_submit").style.visibility = "visible";
         document.getElementById("result").innerHTML = "Your political stance values on each axis are Economical : " + eco + " Cultural : " + cult + " Foreign Policy : " + fng + " Paternalism : " + pat;
