@@ -1,88 +1,196 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>The Political Prism</title>
-        <script src = "PoliticalTestJS.js" type="text/javascript"></script>
-    </head>
+function check()
+{
+    //Questions:
+    var q1 = document.forms["Political Quiz"]["q1"].value;
+    var q2 = document.forms["Political Quiz"]["q2"].value;
+    var q3 = document.forms["Political Quiz"]["q3"].value;
+    var q4 = document.forms["Political Quiz"]["q4"].value;
+    var q5 = document.forms["Political Quiz"]["q5"].value;
+    var q6 = document.forms["Political Quiz"]["q6"].value;
+    var q7 = document.forms["Political Quiz"]["q7"].value;
 
-<!--GUIDE:-->
-<!--X AXIS : Economic; Socialist-Capitalist | var eco-->
-<!--Y AXIS : Cultural; Progressive-Traditionalist | var cult-->
-<!--Z AXIS : Foreign Affairs; Globalist-Nationalist | var fng-->
-<!--SIZE : Paternalism; Anarchist-Totalitarian | var pat-->
+    //Variables:
+    var eco = 0;
+    var cult = 0;
+    var fng = 0;
+    var pat = 0;
 
-    <body>
-        <h1>The Political Prism</h1>
-        <h3> *Some explanation about the test that I'll add later*</h3>
+    //Question results:
 
-        <form id = "Political Quiz" name = "Political Quiz">
+    //QUESTION 1 :
+        if (q1 == "free")
+        {
+            eco = eco + 1;
+            fng = fng + 1;
+        }
 
-                <!--ECONOMIC QUESTIONS-->
+        else if (q1 == "semifree")
+        {
+            eco = eco + 0.5;
+        }
 
-                <p>1. What are your views on free trade?<br>
-                    <input type="radio" name="q1" value="free">Everyone should be allowed to trade accross borders without any repercussions or tariffs<br>
-                    <input type="radio" name="q1" value="semifree">Free trade should be pursued as much as possible but we should still take measures to protect local industries<br>
-                    <input type="radio" name="q1" value="protect">We shouldn't import unless it is absolutely necessary and aim to become resource-independent<br>
-                </p>
+        else if (q1 == "protect")
+        {
+            eco = eco - 0.75;
+            fng = fng - 0.75;
+            cult = cult + 0.25;
+        }
 
-                <p>2. Should a government tax its citizens?<br>
-                    <input type="radio" name="q2" value="redistribution">Yes, a government must tax its citizens to fund projects as well as redistribution to create a safety net<br>
-                    <input type="radio" name="q2" value="onlyprojects">A government should only tax to fund projects as using the fruits of your labour for redistribution is akin to slavery<br>
-                    <input type="radio" name="q2" value="anarchist">What government?<br>
-                    <input type="radio" name="q2" value="minarchist">Yes, but only to maintain things that are absolutely necessary (e.g. EMS, roads)<br> 
-                </p>
+    //QUESTION 2 :
+        if (q2 == "redistribution")
+        {
+            eco = eco - 0.25;
+        }
 
+        else if (q2 == "onlyprojects")
+        {
+            eco = eco + 0.5;
+            pat = pat - 0.125;
+        }
 
-                <p>3. What are your views on fiscal and monetary policy? <br>
-                    <input type="radio" name="q3" value="keynesian">Governments should use fiscal policy instead of monetary policy, as the latter is ineffective<br>
-                    <input type="radio" name="q3" value="monetarist">Governments should use monetary policy instead of fiscal policy, to protect private investment<br>
-                    <input type="radio" name="q3" value="austrian">No to both, fiscal policy crowds out private investment, and monetary policy creates business cycles<br>
-                    <input type="radio" name="q3" value="stossel">There can't be policy without government....get it? <br>
-                </p>
+        else if (q2 == "anarchist")
+        {
+            eco = eco + 1;
+            pat = pat - 2;
+        }
 
-                <p>4. Do you support drug legalization? <br>
-                    <input type="radio" name="q4" value="yesDrugs">Yes, individuals should be allowed to pursue activities in their own private capacities, as long as no private property is infringed<br>
-                    <input type="radio" name="q4" value="kindOfDrugs">Yes, but only some drugs, and only to ensure it may be publicly regulated and controlled<br>
-                    <input type="radio" name="q4" value="noDrugs">No, drugs pose both psychological and physiological threats to one's health that should not be perrmitted under any circumstance<br>
-                </p>
+        else if (q2 == "minarchist")
+        {
+            eco = eco + 0.75;
+            pat = pat - 1.5;
+        }
 
-                <p>5. To what extent should education be controlled by the government?<br>
-                    <input type="radio" name="q5" value="propoganda">A government should have control over all curriculums to ensure citizens are patriotic and productive<br>
-                    <input type="radio" name="q5" value="freemarket">Education is just like any other market and impossible for a government to properly control and should thus be completely private<br>
-                    <input type="radio" name="q5" value="primary">Primary schooling should be conducted by the government but should be private from high school to account for different specializations and interests<br>
-                    <input type="radio" name="q5" value="hs">Schooling should be provided by the state until graduation from high school<br>
-                    <input type="radio" name="q5" value="mixed">Schooling should be provided up to university, wherein private universities will coexist with cheaper state funded ones<br>
-                    <input type="radio" name="q5" value="bernie">All education(including post-secondary) should be fully subsidized by the state 
-                </p>
+    //Question 3:
+        if (q3 == "keynesian") {
+            eco = eco - 0.5;
+        }
 
-                <p>6. What is your stance on abortion?<br>
-                    <input type="radio" name="q6" value="babyIsGone">I support abortion in all cases and trimesters<br>
-                    <input type="radio" name="q6" value="babyKillerLite">I support abortion as long as it's not in the third trimester.<br>
-                    <input type="radio" name="q6" value="rape">I think abortion should only be legal in cases of rape, incest or danger to the mother<br>
-                    <input type="radio" name="q6" value="danger">I think abortion should only be legal when the mother is endangered<br>
-                    <input type="radio" name="q6" value="noKill">I believe that abortion should be banned in all cases<br>
-                    <input type="radio" name="q6" value="stossel">Although I don't believe abortion is moral, I also don't think the government has a right to ban abortion<br>
-                </p>
+        else if (q3 == "monetarist") {
+            eco = eco + 0.25;
+        }
 
-                <p>7. What are your thoughts on exchange rate regimes?<br>
-                    <input type="radio" name="q7" value="closed">We shouldn't allow exchange of our currency to prevent it's manipulation and promote domestic stability<br>
-                    <input type="radio" name="q7" value="fixedExchange">We should exchange currencies but go back to the gold standard, to hedge against inflation<br>
-                    <input type="radio" name="q7" value="managedFloat">We should have a floating exchange rate system, but allow governmental management to ensure stable rates <br>
-                    <input type="radio" name="q7" value="floatingExchange">We should have a freely floating exchange rate system with no intervention, to promote purchasing power parity<br>
-                </p>
+        else if (q3 == "austrian") {
+            eco = eco + 0.5;
+        }
 
-                <p>8. What are your views on gun control?<br>
-                    <input type="radio" name="q8" value="standYourGround">We should allow all citizens to hold firearms and defend themselves with lethal force<br>
-                    <input type="radio" name="q8" value="fixedExchange">We should exchange currencies but go back to the gold standard, to hedge against inflation<br>
-                    <input type="radio" name="q8" value="managedFloat">We should have a floating exchange rate system, but allow governmental management to ensure stable rates <br>
-                    <input type="radio" name="q8" value="floatingExchange">We should have a freely floating exchange rate system with no intervention, to promote purchasing power parity<br>
-                </p>
+        else if (q3 == "stossel") {
+            eco = eco + 1;
+        }
 
-                <input id = "button" type = "button" value = "Submit" onclick = "check();">
-        </form>
+    //Question 4:
+        if (q4 == "yesDrugs") 
+        {
+            pat = pat - 0.5;
+            cult = cult - 0.5;
+            eco = eco + 0.75;
+        }
 
-        <div id = "after_submit">
-            <p id = "result"></p>
-        </div>
-    </body>
-</html>
+        else if (q4 == "kindOfDrugs") 
+        {
+            pat = pat + 0.25;
+            cult = cult + 0.25;
+        }
+
+        else if (q4 == "noDrugs") 
+        {
+            pat = pat + 0.5;
+            cult = cult + 0.5;
+        }
+
+    //QUESTION 5 :
+
+        if (q5 == "propoganda")
+        {
+            eco = eco - 0.125;
+            pat = pat + 1;
+        }
+
+        else if (q5 == "freemarket")
+        {
+            eco = eco + 1.25;
+        }
+
+        else if (q5 == "primary")
+        {
+            eco = eco + 1;
+        }
+
+        else if (q5 == "hs")
+        {
+            eco = eco + 0.25;
+        }
+
+        else if (q5 == "mixed")
+        {
+            eco = eco -0.125;
+        }
+
+        else if (q5 == "bernie")
+        {
+            eco = eco - 1;
+            pat = pat + 0.125;
+        }
+
+    //QUESTION 6 :
+
+        if (q6 == "babyIsGone")
+        {
+            cult = cult - 0.75;
+            pat = pat - 0.75;
+        }
+
+        else if (q6 == "babyKillerLite")
+        {
+            cult = cult - 0.5;
+            pat = pat - 0.5;
+        }
+
+        else if (q6 == "rape")
+        {
+            cult = cult + 0.25;
+            pat = pat + 0.25;
+        }
+
+        else if (q6 == "danger")
+        {
+            cult = cult + 0.75;
+            pat = pat + 0.75;
+        }
+
+        else if (q6 == "noKill")
+        {
+            cult = cult + 1;
+            pat = pat + 1;
+        }
+
+        else if (q6 == "stossel")
+        {
+            cult = cult + 0.25;
+            pat = pat - 0.75;
+        }
+
+    //Question 7:
+        if (q7 == "closed") 
+        {
+            eco = eco - 1;
+
+        }
+
+        else if (q7 == "fixedExchange") 
+        {
+            eco = eco - 0.5;
+        }
+
+        else if (q7 == "managedFloat") 
+        {
+            eco = eco + 0.5;
+        }
+
+        else if (q7 == "floatingExchange") 
+        {
+            eco = eco + 1;
+        }
+        
+        document.getElementById("after_submit").style.visibility = "visible";
+        document.getElementById("result").innerHTML = "Your political stance values on each axis are Economical : " + eco + " Cultural : " + cult + " Foreign Policy : " + fng + " Paternalism : " + pat;
+}
