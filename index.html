@@ -88,7 +88,7 @@
         </form>
 
         <canvas id="compass" width="200" height="200"
-            style="border:1px solid #d3d3d3;">
+            style="border:0px solid #d3d3d3;">
         </canvas>
 
         <div id = "after_submit">
@@ -97,17 +97,6 @@
 
         </div>
 
-        <script>
-
-            var canvas = document.getElementById("compass");
-            var ctx = canvas.getContext("2d");
-            ctx.moveTo(0,100);
-            ctx.lineTo(200,100);
-            ctx.moveTo(100,0);
-            ctx.lineTo(100,200);
-            ctx.stroke();
-            
-        </script>
             
     </body>
 </html>

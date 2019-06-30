@@ -225,4 +225,12 @@ function check()
         }
         document.getElementById("after_submit").style.visibility = "visible";
         document.getElementById("result").innerHTML = "Your political stance values on each axis are Economical : " + eco + " Cultural : " + cult + " Foreign Policy : " + fng + " Paternalism : " + pat;
+
+        var canvas = document.getElementById("compass");
+            var ctx = canvas.getContext("2d");
+            ctx.moveTo(0,100);
+            ctx.lineTo(200,100);
+            ctx.moveTo(100,0);
+            ctx.lineTo(100,200);
+            ctx.stroke();
 }
