@@ -8,6 +8,7 @@ function check()
     var q5 = document.forms["Political Quiz"]["q5"].value;
     var q6 = document.forms["Political Quiz"]["q6"].value;
     var q7 = document.forms["Political Quiz"]["q7"].value;
+    var q8 = document.forms["Political Quiz"]["q8"].value;
 
     //Variables:
     var eco = 0;
