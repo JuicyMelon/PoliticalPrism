@@ -191,6 +191,37 @@ function check()
             eco = eco + 1;
         }
         
+    //Question 8:
+        if (q8 == "noGuns") 
+        {
+            pat = pat + 1.25;
+            cult = cult - 1.5;
+
+        }
+
+        else if (q8 == "hogg") 
+        {
+            pat = pat + 0.5;
+            cult = cult - 0.75;
+        }
+
+        else if (q8 == "backCheck") 
+        {
+            pat = pat - 0.25;
+            cult = cult + 0.125;
+        }
+
+        else if (q8 == "noAssault") 
+        {
+            pat = pat - 0.5;
+            cult = cult + 0.25;
+        }
+
+        else if (q8 == "dontTread")
+        {
+            pat = pat - 1.5;
+            cult = cult + 1.75;
+        }
         document.getElementById("after_submit").style.visibility = "visible";
         document.getElementById("result").innerHTML = "Your political stance values on each axis are Economical : " + eco + " Cultural : " + cult + " Foreign Policy : " + fng + " Paternalism : " + pat;
 }
