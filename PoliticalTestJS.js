@@ -79,20 +79,20 @@ function check()
         }
 
     //Question 4:
-        if (q4 == "yesDrugs") 
+        if (q4 == "yesDrugs")
         {
             pat = pat - 0.5;
             cult = cult - 0.5;
             eco = eco + 0.75;
         }
 
-        else if (q4 == "kindOfDrugs") 
+        else if (q4 == "kindOfDrugs")
         {
             pat = pat + 0.25;
             cult = cult + 0.25;
         }
 
-        else if (q4 == "noDrugs") 
+        else if (q4 == "noDrugs")
         {
             pat = pat + 0.5;
             cult = cult + 0.5;
@@ -171,48 +171,48 @@ function check()
         }
 
     //Question 7:
-        if (q7 == "closed") 
+        if (q7 == "closed")
         {
             eco = eco - 1;
 
         }
 
-        else if (q7 == "fixedExchange") 
+        else if (q7 == "fixedExchange")
         {
             eco = eco - 0.5;
         }
 
-        else if (q7 == "managedFloat") 
+        else if (q7 == "managedFloat")
         {
             eco = eco + 0.5;
         }
 
-        else if (q7 == "floatingExchange") 
+        else if (q7 == "floatingExchange")
         {
             eco = eco + 1;
         }
-        
+
     //Question 8:
-        if (q8 == "noGuns") 
+        if (q8 == "noGuns")
         {
             pat = pat + 1.25;
             cult = cult - 1.5;
 
         }
 
-        else if (q8 == "hogg") 
+        else if (q8 == "hogg")
         {
             pat = pat + 0.5;
             cult = cult - 0.75;
         }
 
-        else if (q8 == "backCheck") 
+        else if (q8 == "backCheck")
         {
             pat = pat - 0.25;
             cult = cult + 0.125;
         }
 
-        else if (q8 == "noAssault") 
+        else if (q8 == "noAssault")
         {
             pat = pat - 0.5;
             cult = cult + 0.25;
