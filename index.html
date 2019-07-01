@@ -21,7 +21,8 @@
         <form id = "Political Quiz" name = "Political Quiz">
 
                 <!--ECONOMIC QUESTIONS-->
-
+        <center>
+            <div id="questionBlock">
                 <p>1. What are your views on free trade?<br>
                     <input type="radio" name="q1" value="free">Everyone should be allowed to trade accross borders without any repercussions or tariffs<br>
                     <input type="radio" name="q1" value="semifree">Free trade should be pursued as much as possible but we should still take measures to protect local industries<br>
@@ -89,12 +90,14 @@
                     <input type="radio" name="q8" value="dontTread">Citizens should have an unresticted right to bear arms once they reach adulthood<br>
                     <input type="radio" name="q8" value="trump">Don't Know/Don't Care<br>
                 </p>
+            </div>
+        </center>
 
-
-
+            <center>
                 <input id = "button" type = "button" value = "Submit" onclick = "check();">
+            </center>
         </form>
-
+        <center>
         <canvas id="compass" width="200" height="200"
             style="border:0px solid #d3d3d3;">
         </canvas>
@@ -104,7 +107,7 @@
             <p id = "result"></p>
 
         </div>
-
+       </center>
 
     </body>
 </html>
