@@ -4,7 +4,9 @@
         <title>The Political Prism</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
         <script src = "PoliticalTestJS.js" type="text/javascript"></script>
+
     </head>
 
 <!--GUIDE:-->
@@ -105,11 +107,11 @@
                 <input id = "button" type = "button" value = "Submit" onclick = "check();">
             </center>
         </form>
-        <center>
-        <canvas id="compass" width="200" height="200"
+
+        <canvas id="compass" width="1" height="1"
             style="border:0px solid #d3d3d3;">
         </canvas>
-
+        <center>
         <div id = "after_submit">
 
             <p id = "result"></p>

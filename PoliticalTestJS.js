@@ -1,5 +1,4 @@
-function check()
-{
+function check() {
     //Questions:
     var q1 = document.forms["Political Quiz"]["q1"].value;
     var q2 = document.forms["Political Quiz"]["q2"].value;
@@ -19,218 +18,145 @@ function check()
     //Question results:
 
     //QUESTION 1 :
-        if (q1 == "free")
-        {
-            eco = eco + 1;
-            fng = fng + 1;
-        }
-
-        else if (q1 == "semifree")
-        {
-            eco = eco + 0.5;
-        }
-
-        else if (q1 == "protect")
-        {
-            eco = eco - 0.75;
-            fng = fng - 0.75;
-            cult = cult + 0.25;
-        }
+    if (q1 == "free") {
+        eco = eco + 1;
+        fng = fng + 1;
+    } else if (q1 == "semifree") {
+        eco = eco + 0.5;
+    } else if (q1 == "protect") {
+        eco = eco - 0.75;
+        fng = fng - 0.75;
+        cult = cult + 0.25;
+    }
 
     //QUESTION 2 :
-        if (q2 == "redistribution")
-        {
-            eco = eco - 0.25;
-        }
-
-        else if (q2 == "onlyprojects")
-        {
-            eco = eco + 0.5;
-            pat = pat - 0.125;
-        }
-
-        else if (q2 == "anarchist")
-        {
-            eco = eco + 1;
-            pat = pat - 2;
-        }
-
-        else if (q2 == "minarchist")
-        {
-            eco = eco + 0.75;
-            pat = pat - 1.5;
-        }
+    if (q2 == "redistribution") {
+        eco = eco - 0.25;
+    } else if (q2 == "onlyprojects") {
+        eco = eco + 0.5;
+        pat = pat - 0.125;
+    } else if (q2 == "anarchist") {
+        eco = eco + 1;
+        pat = pat - 2;
+    } else if (q2 == "minarchist") {
+        eco = eco + 0.75;
+        pat = pat - 1.5;
+    }
 
     //Question 3:
-        if (q3 == "keynesian") {
-            eco = eco - 0.5;
-        }
-
-        else if (q3 == "monetarist") {
-            eco = eco + 0.25;
-        }
-
-        else if (q3 == "austrian") {
-            eco = eco + 0.5;
-        }
-
-        else if (q3 == "stossel") {
-            eco = eco + 1;
-        }
+    if (q3 == "keynesian") {
+        eco = eco - 0.5;
+    } else if (q3 == "monetarist") {
+        eco = eco + 0.25;
+    } else if (q3 == "austrian") {
+        eco = eco + 0.5;
+    } else if (q3 == "stossel") {
+        eco = eco + 1;
+    }
 
     //Question 4:
-        if (q4 == "yesDrugs")
-        {
-            pat = pat - 0.5;
-            cult = cult - 0.5;
-            eco = eco + 0.75;
-        }
-
-        else if (q4 == "kindOfDrugs")
-        {
-            pat = pat + 0.25;
-            cult = cult + 0.25;
-        }
-
-        else if (q4 == "noDrugs")
-        {
-            pat = pat + 0.5;
-            cult = cult + 0.5;
-        }
+    if (q4 == "yesDrugs") {
+        pat = pat - 0.5;
+        cult = cult - 0.5;
+        eco = eco + 0.75;
+    } else if (q4 == "kindOfDrugs") {
+        pat = pat + 0.25;
+        cult = cult + 0.25;
+    } else if (q4 == "noDrugs") {
+        pat = pat + 0.5;
+        cult = cult + 0.5;
+    }
 
     //QUESTION 5 :
 
-        if (q5 == "propoganda")
-        {
-            eco = eco - 0.125;
-            pat = pat + 1;
-        }
-
-        else if (q5 == "freemarket")
-        {
-            eco = eco + 1.25;
-        }
-
-        else if (q5 == "primary")
-        {
-            eco = eco + 1;
-        }
-
-        else if (q5 == "hs")
-        {
-            eco = eco + 0.25;
-        }
-
-        else if (q5 == "mixed")
-        {
-            eco = eco -0.125;
-        }
-
-        else if (q5 == "bernie")
-        {
-            eco = eco - 1;
-            pat = pat + 0.125;
-        }
+    if (q5 == "propoganda") {
+        eco = eco - 0.125;
+        pat = pat + 1;
+    } else if (q5 == "freemarket") {
+        eco = eco + 1.25;
+    } else if (q5 == "primary") {
+        eco = eco + 1;
+    } else if (q5 == "hs") {
+        eco = eco + 0.25;
+    } else if (q5 == "mixed") {
+        eco = eco - 0.125;
+    } else if (q5 == "bernie") {
+        eco = eco - 1;
+        pat = pat + 0.125;
+    }
 
     //QUESTION 6 :
 
-        if (q6 == "babyIsGone")
-        {
-            cult = cult - 0.75;
-            pat = pat - 0.75;
-        }
-
-        else if (q6 == "babyKillerLite")
-        {
-            cult = cult - 0.5;
-            pat = pat - 0.5;
-        }
-
-        else if (q6 == "rape")
-        {
-            cult = cult + 0.25;
-            pat = pat + 0.25;
-        }
-
-        else if (q6 == "danger")
-        {
-            cult = cult + 0.75;
-            pat = pat + 0.75;
-        }
-
-        else if (q6 == "noKill")
-        {
-            cult = cult + 1;
-            pat = pat + 1;
-        }
-
-        else if (q6 == "stossel")
-        {
-            cult = cult + 0.25;
-            pat = pat - 0.75;
-        }
+    if (q6 == "babyIsGone") {
+        cult = cult - 0.75;
+        pat = pat - 0.75;
+    } else if (q6 == "babyKillerLite") {
+        cult = cult - 0.5;
+        pat = pat - 0.5;
+    } else if (q6 == "rape") {
+        cult = cult + 0.25;
+        pat = pat + 0.25;
+    } else if (q6 == "danger") {
+        cult = cult + 0.75;
+        pat = pat + 0.75;
+    } else if (q6 == "noKill") {
+        cult = cult + 1;
+        pat = pat + 1;
+    } else if (q6 == "stossel") {
+        cult = cult + 0.25;
+        pat = pat - 0.75;
+    }
 
     //Question 7:
-        if (q7 == "closed")
-        {
-            eco = eco - 1;
+    if (q7 == "closed") {
+        eco = eco - 1;
 
-        }
-
-        else if (q7 == "fixedExchange")
-        {
-            eco = eco - 0.5;
-        }
-
-        else if (q7 == "managedFloat")
-        {
-            eco = eco + 0.5;
-        }
-
-        else if (q7 == "floatingExchange")
-        {
-            eco = eco + 1;
-        }
+    } else if (q7 == "fixedExchange") {
+        eco = eco - 0.5;
+    } else if (q7 == "managedFloat") {
+        eco = eco + 0.5;
+    } else if (q7 == "floatingExchange") {
+        eco = eco + 1;
+    }
 
     //Question 8:
-        if (q8 == "noGuns")
-        {
-            pat = pat + 1.25;
-            cult = cult - 1.5;
+    if (q8 == "noGuns") {
+        pat = pat + 1.25;
+        cult = cult - 1.5;
 
-        }
+    } else if (q8 == "hogg") {
+        pat = pat + 0.5;
+        cult = cult - 0.75;
+    } else if (q8 == "backCheck") {
+        pat = pat - 0.25;
+        cult = cult + 0.125;
+    } else if (q8 == "noAssault") {
+        pat = pat - 0.5;
+        cult = cult + 0.25;
+    } else if (q8 == "dontTread") {
+        pat = pat - 1.5;
+        cult = cult + 1.75;
+    }
+    document.getElementById("after_submit").style.visibility = "visible";
+    document.getElementById("result").innerHTML = "Your political stance values on each axis are Economical : " + eco + " Cultural : " + cult + " Foreign Policy : " + fng + " Paternalism : " + pat;
 
-        else if (q8 == "hogg")
-        {
-            pat = pat + 0.5;
-            cult = cult - 0.75;
-        }
+    var ctx = document.getElementById('compass');
+    var Data = {
+        labels: ["Economic", "Paternalism", "Cultural"],
+        datasets: [{
+            data: [eco, pat, cult],
+            backgroundColor: [
+                "rgba(255, 0, 0, 0.5)",
+                "rgba(100, 255, 0, 0.5)",
+                "rgba(200, 50, 255, 0.5)",
+                "rgba(0, 100, 255, 0.5)"
+            ]
+        }]
+    };
 
-        else if (q8 == "backCheck")
-        {
-            pat = pat - 0.25;
-            cult = cult + 0.125;
-        }
+    var polarAreaChart = new Chart(ctx, {
+        type: 'polarArea',
+        data: Data
+    });
 
-        else if (q8 == "noAssault")
-        {
-            pat = pat - 0.5;
-            cult = cult + 0.25;
-        }
-
-        else if (q8 == "dontTread")
-        {
-            pat = pat - 1.5;
-            cult = cult + 1.75;
-        }
-        document.getElementById("after_submit").style.visibility = "visible";
-        document.getElementById("result").innerHTML = "Your political stance values on each axis are Economical : " + eco + " Cultural : " + cult + " Foreign Policy : " + fng + " Paternalism : " + pat;
-
-        var canvas = document.getElementById("compass");
-            var ctx = canvas.getContext("2d");
-            ctx.moveTo(0,100);
-            ctx.lineTo(200,100);
-            ctx.moveTo(100,0);
-            ctx.lineTo(100,200);
-            ctx.stroke();
 }
